@@ -1,0 +1,23 @@
+[package]
+name = "blue_engine_egui"
+version = "0.4.0"
+edition = "2021"
+description = "egui library for Blue Engine"
+keywords = ["gui", "blue_engine", "egui"]
+categories = ["gui", "game-development", "game-engines", "rendering"]
+repository = "https://github.com/AryanpurTech/BlueEngineEGUI"
+license = "Apache-2.0"
+
+[lib]
+name = "blue_engine_egui"
+crate-type = ["dylib"]
+
+[dependencies]
+blue_engine = { path = "../blue_engine", default-features = false }
+egui = "0.20.1"
+egui-winit = "0.20.1"
+egui-wgpu = { version = "0.20.0", features = ["winit"] }
+
+[[example]]
+name = "hello_gui"
+path = "examples/hello_gui.rs"
